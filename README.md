@@ -2,7 +2,9 @@
 
 
 Keep in mind Mongodb and mongoose are simple difference
+
 MongoDb : MongoDB is a popular, open-source NoSQL database that uses a document-oriented data model. Data is stored in flexible, JSON-like documents rather than in fixed tables as in relational databases. Each document can have a different number of fields, content, and size.
+
 MongoDB provides a powerful aggregation framework for data processing and transformation, which is more versatile compared to SQL-based group-by operations
 
 Mongoose : Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It provides a schema-based solution to model your application data, offering structure and organization to your database interactions.
@@ -64,7 +66,7 @@ app.listen(port, ()=> {
 
 ### Connect database:
  .db('carEngineer'):
-client ইনস্ট্যান্সের .db('carEngineer') পদ্ধতিটি ডাটাবেস নির্বাচন করে। এখানে 'carEngineer' হল সেই ডাটাবেসের নাম যা আপনি অ্যাক্সেস করতে চান। যদি এই নামের ডাটাবেসটি আগে থেকে বিদ্যমান না থাকে, তবে MongoDB এটি তৈরি করবে।
+client ইনস্ট্যান্সের .db('carEngineer') পদ্ধতিটি ডাটাবেস নির্বাচন করা হয় । এখানে 'carEngineer' হল সেই ডাটাবেসের নাম ব্যাবহারকারী অ্যাক্সেস করতে পারে । যদি এই নামের ডাটাবেসটি আগে থেকে বিদ্যমান না থাকে, তবে MongoDB এটি তৈরি করবে।
 3. .collection('services'):
 client.db('carEngineer') পদ্ধতির পরে .collection('services') পদ্ধতিটি নির্দিষ্ট ডাটাবেসের মধ্যে একটি সংগ্রহ (collection) নির্বাচন করে। এখানে 'services' হল সংগ্রহটির নাম। সংগ্রহ হল MongoDB তে ডকুমেন্টগুলির একটি গ্রুপ, যা রেকর্ড বা এন্ট্রি সংরক্ষণ করে। যদি এই নামের সংগ্রহটি আগে থেকে বিদ্যমান না থাকে, তবে MongoDB এটি তৈরি করবে।
 

@@ -175,6 +175,11 @@ app.delete('/bookings/:id', async (req, res) => {
   })
 ```
 
+### oneline Access token generate using cmd onliner
+```
+node -e "console.log('ACCESS_TOKEN_SECRET=' + require('crypto').randomBytes(64).toString('hex'))"
+```
+
 #### `JSON ডাটা কিভাবে mongodb তে ইনসার্ট করবে ?`
 1. create database গিয়ে ডাটাবেস এর প্রথম সেকশনে নাম দিতে হবে তারপর পরের সেকশনে জেসন ফাইলের নাম দিতে হবে।
 2. go to insert button যেটা কিনা বাম পাশে আছে

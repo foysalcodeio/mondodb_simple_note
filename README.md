@@ -19,6 +19,10 @@ npm i express cors mongodb dotenv
    - npm install dotenv --save
 ```
 
+keep in mind : 
+put মানে কোন কিছু নতুন করে রাখা পূবে এই ডাটা রাখা হয় নাই
+patch মানে রাখাকৃত ডাটা আপডেট করা
+
 ## Add your connection string into your application code
 ```
 

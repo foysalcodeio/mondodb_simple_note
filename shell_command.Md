@@ -40,3 +40,50 @@ delete collection
 ```
 db.[collection_name].drop()
 ```
+
+CRUD
+
+create
+```
+db.coll.insertOne({name: "Navi", age: 25}) // insert one document
+db.coll.insertMany([{name: "Navi", age: 25}, {name: "Alice", age: 30}]) // insert many documents
+```
+
+read
+```
+db.coll.count() // count all documents in 'coll' collection
+db.coll.count({name: "Navi"}) // count all documents with name "Navi"
+
+db.coll.find() // list all documents
+db.coll.find({name: "Navi"}) // list all documents with name "Navi"
+db.coll.find({name: "Navi", age: 25}).limit(1) // list all documents with name "Navi" and age 25, and return only one document.
+
+db.coll.find({name: "Navi"}).explain("executionStats") // find document and show execution stats
+```
+
+update
+```
+db.coll.update({name: "Navi"}, {$set: {age: 26}}) // update all documents with name "Navi" and set age to 26
+db.coll.update({name: "Navi"}, {$inc: {age: 1}}) // update all documents with name "Navi" and increment age by 1
+
+db.coll.update({name: "Navi"}, {$unset: {age: 1}}) // update all documents with name "Navi" and set age to null
+db.coll.updateMany({age: {$exists: true}}, {$unset: {age: ""}}) // remove age field from all documents with age field
+```
+
+delete
+```
+db.coll.deleteMany({name: "Navi"}) // remove all documents with name "Navi"
+db.coll.deleteOne({name: "Navi"}) // remove one document with name "Navi"
+```
+
+Index
+```
+db.coll.getIndexes()   // list indexes
+db.coll.getIndexKeys() // list index keys
+
+db.coll.createIndex({"name": 1}) // create index
+db.coll.createIndex({"name": 1, "date": 1})     // create a compound index
+
+db.coll.dropIndex("name_1") // drop index
+
+```

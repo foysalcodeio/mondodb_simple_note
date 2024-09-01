@@ -2,6 +2,11 @@ connect
 ```
 mongosh "mongodb+srv://caruser:Nm6CijZZ2ZlwBA1F@cluster0.1vlp1px.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 ```
+create database
+```
+
+```
+
 Show Databases
 ```
 show dbs

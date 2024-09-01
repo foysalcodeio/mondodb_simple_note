@@ -17,7 +17,7 @@ mongosh "mongodb+srv://caruser:Nm6CijZZ2ZlwBA1F@cluster0.1vlp1px.mongodb.net/?re
 ```
 create database
 ```
-db createCollection("student")
+db.createCollection("student")
 ```
 
 Show Databases

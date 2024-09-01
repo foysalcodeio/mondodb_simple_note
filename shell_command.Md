@@ -1,7 +1,7 @@
 First of All we try to know what is basic difference sql and mongodb datbase
----------------------------------------------------------------------------
 
-    SQL        +        MONGODB
+
+    SQL        |        MONGODB
   - sql------------------nosql
   - relation-------------no-relation
   - table----------------collection

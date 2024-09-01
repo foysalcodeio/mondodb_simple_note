@@ -7,3 +7,11 @@ Show Databases
 show dbs
 db // prints the current database
 ```
+Switch Database
+```
+use db
+```
+show database
+```
+show databases
+```

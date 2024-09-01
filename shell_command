@@ -13,5 +13,5 @@ use db
 ```
 show database
 ```
-show databases
+show collections
 ```

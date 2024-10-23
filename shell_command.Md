@@ -45,7 +45,9 @@ CRUD
 
 create
 ```
+db.collection.insert_one(obj)
 db.coll.insertOne({name: "Navi", age: 25}) // insert one document
+db.collection.insert_many(arr)
 db.coll.insertMany([{name: "Navi", age: 25}, {name: "Alice", age: 30}]) // insert many documents
 ```
 

@@ -65,6 +65,9 @@ db.coll.find({name: "Navi"}).explain("executionStats") // find document and show
 
 update
 ```
+You can update all match entries with:
+db.collection.update({key : 'matchcriteria'}, {key : 'newvalue'}) -> 1st key > match, 2nd key > Replace
+
 db.coll.update({name: "Navi"}, {$set: {age: 26}}) // update all documents with name "Navi" and set age to 26
 db.coll.update({name: "Navi"}, {$inc: {age: 1}}) // update all documents with name "Navi" and increment age by 1
 

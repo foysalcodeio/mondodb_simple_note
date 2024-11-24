@@ -284,6 +284,7 @@ vercel --prod
 - check your public API
 
 
-<img src="code.jpg"/>
+![image](https://github.com/user-attachments/assets/2d64cf74-9465-4d91-9a25-21daab1cab29)
+
 
 # Server Deployment Done

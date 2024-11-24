@@ -192,32 +192,6 @@ node -e "console.log('ACCESS_TOKEN_SECRET=' + require('crypto').randomBytes(64).
 
 Look at this for mongodb official page : https://github.com/mongodb-developer/jumpstart-series/tree/quick-demo
 
-
-# Private Repo for Assignment-11
-
-- Client Side Private repo: https://classroom.github.com/a/SAq3TLhx
-
-- Server Side Private Repo: https://classroom.github.com/a/pcmuZQIr
-
-
-## 🚩: Updates
-#### 📢if we bring any changes or update any of the assignment requirements we will mention them here. Ensure that you check this file twice a day during the assignment. We will mention the variant. 
-```
-0: No updates yet
-1: Requirement 0010(ten) => Updates:
-    ● Main Requirements 1c. and 
-    ● Manage My post Page.
-2: Requirement 0002(two) => Updates:
-    ● Update a word mistake in the website theme.
-    ● You have to implement search in all search page. Not in navbar
-3: Requirement 0007(Seven) => Updates:
-    ● Read The main requirement 10 again. Some clarifications are provided.
-```
-## What To Submit?
-- Your assignment ID/Variant (The name of the pdf requirement file. Watch video for more)
-- Your client-side code GitHub repository
-- Your server-side code GitHub repository
-- Your live website link
 ## Server Deployment steps
 
 1. comment await commands outside api methods for solving gateway timeout error

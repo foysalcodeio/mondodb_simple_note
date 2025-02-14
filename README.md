@@ -288,3 +288,13 @@ vercel --prod
 
 
 # Server Deployment Done
+
+## To search for partial matches in a field
+```
+db.collection.find({ fieldName: { $regex: "partOfWord", $options: "i" } })
+```
+example
+```
+db.movies.find({ title: { $regex: "war", $options: "i" } })
+
+```

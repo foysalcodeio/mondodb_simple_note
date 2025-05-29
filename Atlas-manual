@@ -1,0 +1,20 @@
+create cluster
+manual 
+------
+1. search mongodb atlas
+2. login & provide basic info
+3. MO, Name - Cluster0, Provider-aws, Region - N.Virginia = create deployment
+4. Connect to Cluster0 - taker username & Password
+5. create database user
+6. Connect to cluster0 -> Connect to your application -> select Driver
+
+# if you access another user
+1. select Database Access
+2. select password Authentication method
+3. Build in Role -> READ & Write to any user
+4. click on 'Add User' this button
+
+# Network Acess
+ - Allow Acess from anywhere 
+ - 0.0.0.0
+

@@ -1,9 +1,66 @@
 Login Using Brower
 --------------------
 if you are new:
-atlas setup
-else :
-   $ atlas auth login
+ - atlas setup
+ - atlas auth login
+
+OR use Public/Private API Keys:
+ $ atlas auth login --publicKey "<YOUR_PUBLIC_KEY>" --privateKey "<YOUR_PRIVATE_KEY>"
+🔑 API keys can be created from the MongoDB Atlas dashboard under:
+Organization → Access Manager → API Keys
+
+
+
+Create a Cluster
+-----------------
+ $ atlas clusters create myCluster \
+  --provider AWS \
+  --region US_EAST_1 \
+  --tier M0 \
+  --mongodb-version 7.0
+  
+📌 M0 is a free tier cluster. You can change the name, provider, and region as needed.
+
+Whitelist your IP Address
+----------------------------
+Allow all IPs (development only)
+$ atlas accessList create --ip 0.0.0.0
+Allow a specific IP
+$ atlas accessList create --ip <your-ip-address>
+
+
+
+Create a Database User
+-----------------------
+atlas dbusers create \
+  --username myUser \
+  --password myPassword123 \
+  --role readWriteAnyDatabase \
+  --authDatabase admin
+
+Get Connection String
+-------------------------
+atlas clusters connectionStrings describe --clusterName myCluster
+
+you'll get a connection string like:
+mongodb+srv://myUser:<password>@myCluster.abcd123.mongodb.net/?retryWrites=true&w=majority
+
+
+full setup onliner
+--------------------
+atlas auth login
+atlas clusters create myCluster --provider AWS --region US_EAST_1 --tier M0
+atlas accessList create --ip 0.0.0.0
+atlas dbusers create --username myUser --password myPassword123 --role readWriteAnyDatabase --authDatabase admin
+atlas clusters connectionStrings describe --clusterName myCluster
+
+
+
+
+
+
+
+
 
 
 

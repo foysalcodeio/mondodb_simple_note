@@ -1,0 +1,9 @@
+Login Using Brower
+--------------------
+if you are new:
+atlas setup
+else :
+   $ atlas auth login
+
+
+

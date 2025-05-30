@@ -1,3 +1,31 @@
+atlas cluster ls
+atlas cluster get Cluster29110
+atlas cluster get Cluster29110 -o json
+atlas cluster delete Cluster29110
+
+
+
+
+//payment require for all 
+------------------------------------------
+atlas setup --force --tier M10 --clusterName ClusterM10
+
+
+atlas cluster --help
+atlas cluster list
+
+atlas cluster create --help
+
+free cluster deploy
+atlas cluster create myCluster --projectId 5e2211c17a3e5a48f5497de3 --provider AWS --region US_EAST_1 --tier M0
+
+#Deploy a three-member replica set named myRS in GCP for the project with the ID 5e2211c17a3e5a48f5497de3:
+atlas cluster create myRS --projectId 5e2211c17a3e5a48f5497de3 --provider GCP --region EASTERN_US --members 3 --tier M10  --mdbVersion 5.0 --diskSizeGB 10
+atlas cluster create ClusterTest --provider AWS --region US_EAST_1 --members 3 --tier M10  --mdbVersion 5.0 --diskSizeGB 10
+
+==================================================================================================================================================================
+
+
 Login Using Brower
 --------------------
 if you are new:

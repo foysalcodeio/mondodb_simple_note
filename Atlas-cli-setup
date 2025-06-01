@@ -43,11 +43,7 @@ Organization → Access Manager → API Keys
 
 Create a Cluster
 -----------------
- $ atlas clusters create myCluster \
-  --provider AWS \
-  --region US_EAST_1 \
-  --tier M0 \
-  --mongodb-version 7.0
+ $ atlas clusters create myCluster --provider AWS --region US_EAST_1 --tier M0 --mongodb-version 7.0
   
 📌 M0 is a free tier cluster. You can change the name, provider, and region as needed.
 
@@ -62,11 +58,7 @@ $ atlas accessList create --ip <your-ip-address>
 
 Create a Database User
 -----------------------
-atlas dbusers create \
-  --username myUser \
-  --password myPassword123 \
-  --role readWriteAnyDatabase \
-  --authDatabase admin
+atlas dbusers create --username myUser --password myPassword123 --role readWriteAnyDatabase --authDatabase admin
 
 Get Connection String
 -------------------------
@@ -79,12 +71,12 @@ mongodb+srv://myUser:<password>@myCluster.abcd123.mongodb.net/?retryWrites=true&
 full setup onliner
 --------------------
 atlas auth login
-atlas clusters create myCluster --provider AWS --region US_EAST_1 --tier M0
+atlas clusters create bistroBox --provider AWS --region US_EAST_1 --tier M0
 atlas accessList create --ip 0.0.0.0
 atlas dbusers create --username myUser --password myPassword123 --role readWriteAnyDatabase --authDatabase admin
 atlas clusters connectionStrings describe --clusterName myCluster
 
---------------------------------
+==================================================================================================
 
 atlas clusters create MyFreeCluster --type M0 --provider AWS --region US_EAST_1
 atlas accessLists create --addr 0.0.0.0/0

@@ -1,3 +1,5 @@
+atlas quickstart
+
 atlas cluster ls
 atlas cluster get Cluster29110
 atlas cluster get Cluster29110 -o json
@@ -82,8 +84,58 @@ atlas accessList create --ip 0.0.0.0
 atlas dbusers create --username myUser --password myPassword123 --role readWriteAnyDatabase --authDatabase admin
 atlas clusters connectionStrings describe --clusterName myCluster
 
+--------------------------------
+
+atlas clusters create MyFreeCluster --type M0 --provider AWS --region US_EAST_1
+atlas accessLists create --addr 0.0.0.0/0
+atlas dbusers create --username myuser --password mypassword --role readWriteAnyDatabase
+atlas clusters describe MyFreeCluster
+atlas clusters connectionStrings describe MyFreeCluster
+
+===================== deepseek ================================
+1. Authenticate atlas account : atlas auth login
+atlas clusters create MyFreeCluster --tier M0 --provider AWS --region US_EAST_1 --mdbVersion 7.0
+atlas clusters watch MyFreeCluster
+atlas dbusers create --username myAdmin --password mySecurePassword123 --role atlasAdmin@admin
+atlas accessLists create --ip 0.0.0.0/0 --comment "Allow all IPs"  # Not recommended for production!
+atlas clusters connectionStrings describe MyFreeCluster
 
 
+additional userfull
+atlas clusters list
+atlas clusters describe MyFreeCluster
+atlas clusters delete MyFreeCluster
+
+======================================================================
+
+1. Login to MongoDB Atlas : atlas auth login
+
+2. Create a Free Cluster : atlas clusters create myFreeCluster \
+  --provider AWS \
+  --region US_EAST_1 \
+  --tier M0 \
+  --projectId <your_project_id>
+
+
+3. get your product id : atlas projects list
+
+4. Optional : create a new Project : atlas projects create "MyProject"
+
+5. IP whitelist : atlas accessLists create \
+  --projectId <your_project_id> \
+  --ipAddress 0.0.0.0/0 \
+  --comment "Allow access from anywhere"
+
+
+6. Create a Database User: atlas dbusers create \
+  --username myUser \
+  --password myPassword123 \
+  --projectId <your_project_id> \
+  --role readWriteAnyDatabase@admin
+
+
+7. Get Connection String : atlas clusters connectionStrings describe myFreeCluster ^
+  --projectId <your_project_id>
 
 
 
